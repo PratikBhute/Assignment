@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+    <!-- bean definitions here -->
+    <bean id="book_bean" class="SpringDemo.Book">
+        <property name="isbn" value="4587"/>
+        <property name="title" value="Application mobile"/>
+        <property name="price" value="500"/>
+    </bean>
+    <bean id="book_constructor" class="SpringDemo.Book">
+        <constructor-arg name="isbn" value="9122"/>
+        <constructor-arg name="title" value="Software Application Learning"/>
+        <constructor-arg name="price" value="559"/>
+    </bean>
+    <bean id="book_constructor_mixed" class="SpringDemo.Book">
+        <constructor-arg name="isbn" value="9122"/>
+        <constructor-arg name="title" value="Software Application Learning"/>
+        <property name="price" value="940"/>
+    </bean>
+    <bean id="author_book" class="SpringDemo.Author" scope="singleton">
+        <property name="authorId" value="875"/>
+        <property name="aName" value="Mr.Pratik.B"/>
+        <property name="country" value="India"/>
+<!--        <property name="book_author" ref="book_bean"/>-->
+        <property name="book_author" ref="book_bean"></property>
+    </bean>
+    <bean class="SpringDemo.Publisher" id="pub" init-method="publisherCreate" destroy-method="destroy"></bean>
+</beans>

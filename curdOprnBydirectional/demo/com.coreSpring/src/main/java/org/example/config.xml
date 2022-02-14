@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean class="org.example.Employee" name="employee">
+
+        <property name="eid" value="124"/>
+        <property name="name" value="7452"/>
+        <property name="phone" value="poi"/>
+
+    </bean>
+
+    <bean class="org.example.Laptop" name="laptop" >
+
+        <constructor-arg name="lid" value="7458"/>
+        <constructor-arg name="cpu" value="trg4"/>
+        <constructor-arg name="graphicCard" value="rdm"/>
+        <constructor-arg name="hdd" value="741"/>
+        <constructor-arg name="ram" value="7889"/>
+
+    </bean>
+
+
+
+</beans>

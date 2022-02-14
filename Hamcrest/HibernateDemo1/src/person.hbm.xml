@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<hibernate-mapping>
+    <class name="Person" table="person" lazy="false">
+       <id name="pId" column="PERSON_ID">
+            <generator class="native" />
+        </id>
+        <property name="pName" column="PERSON_NAME"></property>
+        <property name="pAddress" column="PERSON_ADDRESS" length="20"></property>
+        <property name="pPhone" column="PERSON_PHONE" length="20"></property>
+
+
+    </class>
+</hibernate-mapping>
